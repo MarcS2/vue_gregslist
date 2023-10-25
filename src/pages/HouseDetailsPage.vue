@@ -10,7 +10,7 @@
         <img :src="activeHouse.imgUrl" alt="house image">
       </div>
       <div class="col-12">
-        <h1>{{ activeHouse.creator.name }}</h1>
+        <h1>{{ activeHouse }}</h1>
       </div>
     </section>
   </div>
@@ -21,7 +21,7 @@
 import { computed, onMounted } from "vue";
 import { housesService } from "../services/HousesService";
 import Pop from "../utils/Pop";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 import { AppState } from "../AppState";
 export default {
   setup() {
